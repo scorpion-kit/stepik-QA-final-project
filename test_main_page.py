@@ -29,5 +29,5 @@ def test_guest_should_see_login_page(browser):
     page2 = LoginPage(browser, link)
     page2.open()
     page2.should_be_login_page()
-
+    
 
