@@ -24,13 +24,16 @@ pip install -r \path\to\requirements.txt
 7. Убедитесь, что путь к chromedriver.exe прописан в PATH, либо скопируйте этот файл в текущую папку Scripts из шага 4.
 
 8. Запустите тесты командой:
+
 File "test_main_page.py" you can run by 'pytest -s -v --tb=line --language=en  test_main_page.py'
 
 File "test_product_page.py" 'pytest -s -v --tb=line --language=en -m need_review test_product_page.py'
 
 
 9. Проверьте, что все тесты прошли успешно.
+
 Result for "test_main_page.py": 4 passed, 5 deselected
+
 Result "test_product_page.py": 4 passed
 
 10. Если же тесты не запускаются, не спешите ставить 0 баллов и с чувством выполненного долга переходить к следующей рецензии.
