@@ -1,8 +1,9 @@
 from selenium.webdriver.common.by import By
 
 #селектор - это пара: как искать и что искать
-class MainPageLocators():
+class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
 
 class LoginPageLocators():
     #регистрация
@@ -11,6 +12,9 @@ class LoginPageLocators():
     LOGIN_FORM = (By.CSS_SELECTOR, "#register_form")
     #url
     LOGIN_URL = (By.CSS_SELECTOR, "#login_link")
+    
+class MainPageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
 class ProductPageLocators():
     ADD_BUTTON = (By.CSS_SELECTOR, ".btn-add-to-basket")
