@@ -31,7 +31,7 @@ class BasePage():
         assert "basket" in self.browser.current_url, "Basket unavailable"
 
     def should_be_authorized_user(self):
-    assert self.is_element_present(*BasePageLocators.USER_ICON), \
+        assert self.is_element_present(*BasePageLocators.USER_ICON), \
            "User icon is not presented," \
             " probably unauthorised user"
     
