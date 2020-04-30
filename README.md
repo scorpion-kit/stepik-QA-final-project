@@ -19,6 +19,8 @@ cd \path\to\new_virtual_env\Scripts
 6. Установите пакеты в окружение из файла requirements.txt, который должен быть в скачанном проекте:
 pip install -r \path\to\requirements.txt
 
+(Да, команда pip freeze > requirements.txt была выполнена. Весь пакет необходим)
+
 7. Убедитесь, что путь к chromedriver.exe прописан в PATH, либо скопируйте этот файл в текущую папку Scripts из шага 4.
 
 8. Запустите тесты командой:
