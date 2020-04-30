@@ -36,7 +36,6 @@ class BasePage():
             " probably unauthorised user"
     
     #проверить наличие ссылки;
-    #*BasePageLocators.LOGIN_LINK - кортеж, который надо распаковать
     def should_be_login_link(self):
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), \
                "Login link is not presented"
