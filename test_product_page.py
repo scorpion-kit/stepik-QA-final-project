@@ -52,6 +52,8 @@ def test_guest_can_add_product_to_basket(browser):
     product_page = ProductPage (browser, link)
     product_page.open()
     product_page.add_to_basket()
+    product_page.solve_quiz_and_get_code()
+    time.sleep(5)
     product_page.should_be_book_name()
     product_page.should_be_book_price()
 
@@ -85,12 +87,12 @@ class TestUserAddToBasketFromProductPage():
         self.product_page.should_not_be_success_message()
         
     @pytest.mark.need_review
-    def test_user_can_add_product_to_basket(browser):
-	link = "http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/?promo=newYear"
-	product_page = ProductPage (browser, link)
-	product_page.open()
-	product_page.add_to_basket()
-	product_page.solve_quiz_and_get_code()
-	time.sleep(5)
-	product_page.should_be_book_name()
-	product_page.should_be_book_price()
+    def test_user_can_add_product_to_basket(self, browser):
+        link = "http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/?promo=newYear"
+        self.product_page = ProductPage (browser, link)
+        self.product_page.open()
+        self.product_page.add_to_basket()
+        self.product_page.solve_quiz_and_get_code()
+        time.sleep(5)
+        self.product_page.should_be_book_name()
+        self.product_page.should_be_book_price()
